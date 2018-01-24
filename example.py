@@ -21,7 +21,11 @@ subscription_id = '3b4d41fa-e91d-4bc7-bc11-13d221b3b77d'
 
 compute_client = ComputeManagementClient(credentials, subscription_id)
 def run_script():
+<<<<<<< HEAD
 	GROUP_NAME = 'shuicli'
+=======
+        GROUP_NAME = 'shuicli'
+>>>>>>> c2bea2a50d10e0f2f451810447a7df1e6689f36f
     vmname = 'shui'
     ext_type_name = 'CustomScriptForLinux'
     ext_name = 'varun-script-test'
