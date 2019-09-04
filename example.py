@@ -22,7 +22,7 @@ subscription_id = '3b4d41fa-e91d-4bc7-bc11-13d221b3b77d'
 compute_client = ComputeManagementClient(credentials, subscription_id)
 
 def run_script():
-	GROUP_NAME = 'shuicli'
+    GROUP_NAME = 'shuicli'
     vmname = 'shui'
     ext_type_name = 'CustomScriptForLinux'
     ext_name = 'varun-script-test'
@@ -38,6 +38,6 @@ def run_script():
             'commandToExecute': "sh custom_script.sh"
         }
     }
-    ext_poller = compute_client.virtual_machine_extensions.create_or_update( GROUP_NAME, vmname,ext_name,params_create )
+    ext_poller = compute_client.virtual_machine_extensions.create_or_update( GROUP_NAME, vmname, ext_name, params_create )
 
 run_script
