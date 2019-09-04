@@ -20,17 +20,14 @@ credentials = ServicePrincipalCredentials(
 subscription_id = '3b4d41fa-e91d-4bc7-bc11-13d221b3b77d'
 
 compute_client = ComputeManagementClient(credentials, subscription_id)
+
 def run_script():
-<<<<<<< HEAD
 	GROUP_NAME = 'shuicli'
-=======
-        GROUP_NAME = 'shuicli'
->>>>>>> c2bea2a50d10e0f2f451810447a7df1e6689f36f
     vmname = 'shui'
     ext_type_name = 'CustomScriptForLinux'
     ext_name = 'varun-script-test'
     params_create = {
-        'location':'centralindia',
+        'location': 'centralindia',
         'publisher': 'Microsoft.OSTCExtensions',
         'virtual_machine_extension_type': ext_type_name,
         'type_handler_version': '1.5',
@@ -42,4 +39,5 @@ def run_script():
         }
     }
     ext_poller = compute_client.virtual_machine_extensions.create_or_update( GROUP_NAME, vmname,ext_name,params_create )
+
 run_script
